@@ -18,9 +18,15 @@ if (process.env.NODE_ENV !== 'production') {
   });
 }
 
-app.listen(process.env.PORT || 3050, () => 
-  console.log('Express Server running on port:3050')
-);
+app.listen(process.env.PORT || 3050, () => {
+  let port = "";
+  if (process.env.PORT) {
+    port = JSON.stringify(process.env.PORT);
+  } else {
+    port = "3050"
+  }
+  console.log(`Express Server running on port:${port}`)
+});
 
 
 
