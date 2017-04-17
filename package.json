@@ -7,6 +7,7 @@
     "build": "npm run clean && webpack -p",
     "clean": "rimraf dist",
     "deploy": "yarn run build && git subtree push --prefix dist origin gh-pages",
+    "herokuDeploy": "git push heroku master",
     "serve": "webpack-dev-server"
   },
   "repository": "https://github.com/StephenGrider/WebpackProject",
